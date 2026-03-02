@@ -26,7 +26,7 @@ const Hero = () => {
     useEffect(() => {
         const preload = async () => {
             const framesToPreload = [];
-            for (let i = 1; i <= totalFrames; i += 2) { // Preload more frames for smoother full-screen transition
+            for (let i = 1; i <= totalFrames; i++) { // Preload ALL frames for perfectly smooth transition
                 framesToPreload.push(`/HeroImages/ezgif-frame-${String(i).padStart(3, '0')}.jpg`);
             }
 
@@ -56,7 +56,6 @@ const Hero = () => {
                 {/* The Animation Image - Full Screen Cover, No Margins */}
                 <div className="absolute inset-0 w-full h-full">
                     <motion.img
-                        key={currentFrame}
                         src={`/HeroImages/ezgif-frame-${formatFrame(currentFrame)}.jpg`}
                         alt="CAMLIQA Product Animation"
                         className="w-full h-full object-cover"
