@@ -1,9 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ProfileSection from './components/ProfileSection';
-import ContactSection from './components/ContactSection';
-import QRSection from './components/QRSection';
 import ProductsPreview from './components/ProductsPreview';
 import AllProductsSection from './components/AllProductsSection';
 import InquiryForm from './components/InquiryForm';
@@ -19,15 +16,6 @@ const App = () => {
                     <section id="home">
                         <Hero />
                     </section>
-                    <section id="profile">
-                        <ProfileSection />
-                    </section>
-                    <section id="contact">
-                        <ContactSection />
-                    </section>
-                    <div id="qr">
-                        <QRSection />
-                    </div>
                     <section id="products">
                         <ProductsPreview />
                         <div id="all-products">

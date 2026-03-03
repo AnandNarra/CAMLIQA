@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Hero = () => {
     const containerRef = useRef(null);
-    const totalFrames = 200;
+    const totalFrames = 14;
 
     // Create a large scroll area to pin the animation
     // The animation will take place over 300vh of scrolling
@@ -27,7 +27,7 @@ const Hero = () => {
         const preload = async () => {
             const framesToPreload = [];
             for (let i = 1; i <= totalFrames; i++) { // Preload ALL frames for perfectly smooth transition
-                framesToPreload.push(`/HeroImages/ezgif-frame-${String(i).padStart(3, '0')}.jpg`);
+                framesToPreload.push(`/HeroImages/ezgif-frame-${String(i).padStart(3, '0')}.png`);
             }
 
             await Promise.all(
@@ -56,7 +56,7 @@ const Hero = () => {
                 {/* The Animation Image - Full Screen Cover, No Margins */}
                 <div className="absolute inset-0 w-full h-full">
                     <motion.img
-                        src={`/HeroImages/ezgif-frame-${formatFrame(currentFrame)}.jpg`}
+                        src={`/HeroImages/ezgif-frame-${formatFrame(currentFrame)}.png`}
                         alt="CAMLIQA Product Animation"
                         className="w-full h-full object-cover"
                         initial={false}
